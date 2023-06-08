@@ -6165,7 +6165,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1815940028239644, guid: 8cfd5a7cd56209043a3cf3198b9ac631, type: 3}
       propertyPath: m_Name
-      value: Chr_Samurai_Grunt_01
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4219425020282648, guid: 8cfd5a7cd56209043a3cf3198b9ac631, type: 3}
       propertyPath: m_RootOrder
@@ -6227,6 +6227,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95948247356402492, guid: 8cfd5a7cd56209043a3cf3198b9ac631, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a25fd002f3d0c46828877b7ed041d305, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cfd5a7cd56209043a3cf3198b9ac631, type: 3}
 --- !u!1001 &655806100
@@ -11263,7 +11267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4647292827260564, guid: 0b2ff0d7d1b09eb4c9343d020e527ec0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 50.7
+      value: 49.4
       objectReference: {fileID: 0}
     - target: {fileID: 4647292827260564, guid: 0b2ff0d7d1b09eb4c9343d020e527ec0, type: 3}
       propertyPath: m_LocalPosition.y
