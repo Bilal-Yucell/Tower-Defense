@@ -1,6 +1,9 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
+/*
+
+
 namespace RPGCharacterAnims
 {
 	class SetupInputLayers:AssetPostprocessor
@@ -13,7 +16,7 @@ namespace RPGCharacterAnims
 		}
 	}
 
-	public class SetupMessageWindow:EditorWindow
+      public class SetupMessageWindow:EditorWindow
 	{
 		void OnGUI()
 		{
@@ -21,3 +24,6 @@ namespace RPGCharacterAnims
 		}
 	}
 }
+
+
+	*/
