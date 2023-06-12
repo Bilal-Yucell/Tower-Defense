@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 100f;
+    public float speed = 30f;
 
     private Transform target;
     private int waveintIndex = 0;
