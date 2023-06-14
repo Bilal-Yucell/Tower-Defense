@@ -37,7 +37,6 @@ public class Enemy : MonoBehaviour
 
         waveintIndex++;
         target = Waypoints.points[waveintIndex];
-        // transform.rotation *= Quaternion.Euler(0f, rotationAngle, 0f);
     }
 
 }
