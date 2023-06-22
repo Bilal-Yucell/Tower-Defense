@@ -120,3 +120,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 70
   impactEffect: {fileID: 9123227824349059358, guid: 7ac2447195d64426bbb4afcc3af993ea, type: 3}
+  PlayerAnim: {fileID: 0}

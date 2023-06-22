@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
     private Transform target;
 
     public float speed = 70f;
@@ -36,6 +35,7 @@ public class Bullet : MonoBehaviour
 
     void HitTarget()
     {
+        
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
 

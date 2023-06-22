@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// using System.Numerics;
 
 public class Turret : MonoBehaviour
 {
+    public GameObject Head;
 
     private Transform target;
 
@@ -23,9 +25,13 @@ public class Turret : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
+    public Animator PlayerAnim;
+
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        PlayerAnim = Head.GetComponent<Animator>();
+        PlayerAnim.SetBool("idle", true);
     }
 
     void UpdateTarget()
@@ -77,6 +83,8 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
+        PlayerAnim.SetBool("throw", true);
+        // PlayerAnim.SetBool("ThrowAnim", false);
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
