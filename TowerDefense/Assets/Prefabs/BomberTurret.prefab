@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 7478666259255103085}
   - component: {fileID: 7423837301194472207}
   m_Layer: 0
-  m_Name: StandardTurret
+  m_Name: BomberTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,13 +79,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Head: {fileID: 7479684204612845245}
   range: 60
-  fireRate: 1
+  fireRate: 0.5
   enemyTag: Enemy
   partToRotate: {fileID: 7478666259604450455}
   turnSpeed: 10
   bulletPrefab: {fileID: 849649073735835049, guid: 5b9df95d282b14ca38d659dd6c8e4f1b, type: 3}
   firePoint: {fileID: 1624584174879435811}
-  PlayerAnim: {fileID: 7392779904629976997}
 --- !u!1 &7478666259604450448
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,11 +269,6 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 2f749e6e07de14f02921651f4f9468bb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d70fa8020733a24bb64b0b16d7fb8da, type: 3}
---- !u!95 &7392779904629976997 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 95104943993134400, guid: 5d70fa8020733a24bb64b0b16d7fb8da, type: 3}
-  m_PrefabInstance: {fileID: 7478666259060863717}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7477939013468986169 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4352689255164380, guid: 5d70fa8020733a24bb64b0b16d7fb8da, type: 3}

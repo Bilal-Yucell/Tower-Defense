@@ -14,8 +14,8 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
-    public GameObject standardTurretPrefab;
-    public GameObject anotherTurretPrefab;
+    public GameObject bomberTurretPrefab;
+    public GameObject arrowLauncherPrefab;
 
     private GameObject turretToBuild;
 
