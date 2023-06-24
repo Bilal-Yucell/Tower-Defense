@@ -3588,7 +3588,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33c00f4cb89c4d08963c0a8d24f66fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
+  health: 100
+  value: 50
+  deathEffect: {fileID: 7673573845620770677, guid: 3dae6fe81e10648ea9133f62fc41aec7, type: 3}
   rotationSpeedMultiplier: 5
 --- !u!1 &4539961093500004264
 GameObject:
