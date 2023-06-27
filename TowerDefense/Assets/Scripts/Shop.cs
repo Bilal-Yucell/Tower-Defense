@@ -4,6 +4,7 @@ public class Shop : MonoBehaviour
 {
     public TurretBlueprint bomberTurret;
     public TurretBlueprint arrowLauncher;
+    public TurretBlueprint magician;
 
     BuildManager buildManager;
 
@@ -22,6 +23,12 @@ public class Shop : MonoBehaviour
     {
         Debug.Log("Arrow Launcher Selected");
         buildManager.SelectTurretToBuild(arrowLauncher);
+    }
+
+    public void SelectMagician()
+    {
+        Debug.Log("Magician Selected");
+        buildManager.SelectTurretToBuild(magician);
     }
 
 }

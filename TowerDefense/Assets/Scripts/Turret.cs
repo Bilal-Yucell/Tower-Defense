@@ -9,11 +9,18 @@ public class Turret : MonoBehaviour
 
     private Transform target;
 
-    [Header("Attributes")]
+    [Header("General")]
 
     public float range = 60f;
+
+    [Header("Use Bullets (defaults)")]
+    public GameObject bulletPrefab;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
+
+    [Header("Use Magic")]
+    public bool useMagic = false;
+    public LineRenderer lineRenderer;
 
     [Header("Unity Setup Fields")]
 
@@ -22,7 +29,6 @@ public class Turret : MonoBehaviour
     public Transform partToRotate;
     public float turnSpeed = 10f;
 
-    public GameObject bulletPrefab;
     public Transform firePoint;
 
     // public Animator PlayerAnim;
@@ -63,22 +69,50 @@ public class Turret : MonoBehaviour
     void Update()
     {
         if (target == null)
-            return;
+        {
+            if (useMagic)
+            {
+                if (lineRenderer.enabled)
+                    lineRenderer.enabled = false;
+            }
 
-        // Target lock on
+            return;
+        }
+
+        LockOnTarget();
+
+        if (useMagic)
+        {
+            Magic();
+        }
+        else
+        {
+            if (fireCountdown <= 0f)
+            {
+                Shoot();
+                fireCountdown = 1f / fireRate;
+            }
+
+            fireCountdown -= Time.deltaTime;
+        }
+
+    }
+
+    void LockOnTarget()
+    {
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+    }
 
-        if (fireCountdown <= 0f)
-        {
-            Shoot();
-            fireCountdown = 1f / fireRate;
-        }
+    void Magic()
+    {
+        if (!lineRenderer.enabled)
+            lineRenderer.enabled = true;
 
-        fireCountdown -= Time.deltaTime;
-
+        lineRenderer.SetPosition(0, firePoint.position);
+        lineRenderer.SetPosition(1, target.position);
     }
 
     void Shoot()
