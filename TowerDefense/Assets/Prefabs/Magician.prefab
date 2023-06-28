@@ -72,6 +72,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6836370212474312762, guid: 6bb910de82ba547a6b033bfdcc344e00, type: 3}
+      propertyPath: range
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6836370212474312762, guid: 6bb910de82ba547a6b033bfdcc344e00, type: 3}
       propertyPath: impactLight
       value: 
       objectReference: {fileID: 452747122157272046}
