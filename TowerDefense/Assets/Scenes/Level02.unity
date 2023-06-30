@@ -4714,8 +4714,9 @@ MonoBehaviour:
     count: 10
     rate: 3
   spawnPoint: {fileID: 4665312438182986}
-  timeBetweenWaves: 10
+  timeBetweenWaves: 1
   waveCountdownText: {fileID: 1964173108}
+  gameManager: {fileID: 363544957}
 --- !u!114 &363544955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4758,6 +4759,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 1648421305}
+  nextLevel: Level02
+  levelToUnlock: 2
+  sceneFader: {fileID: 7967110258671074421}
 --- !u!114 &363544958
 MonoBehaviour:
   m_ObjectHideFlags: 0
