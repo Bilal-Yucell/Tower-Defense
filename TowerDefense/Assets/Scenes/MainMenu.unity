@@ -1762,7 +1762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c597b96d13c184bd3997b0083075d3cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: MainScene
+  levelToLoad: LevelSelect
   sceneFader: {fileID: 514282508}
 --- !u!1001 &1436203887
 PrefabInstance:

@@ -4,7 +4,12 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public static int EnemiesAlive = 0;
+    public static int EnemiesAlive;
+
+    void Start()
+    {
+        EnemiesAlive = 0;
+    }
 
     public Wave[] waves;
 
