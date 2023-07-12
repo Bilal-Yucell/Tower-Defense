@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
+    [HideInInspector]
+    public Animator animator;
+
     public GameObject Head;
 
     private Transform target;
@@ -38,13 +41,10 @@ public class Turret : MonoBehaviour
 
     public Transform firePoint;
 
-    // public Animator PlayerAnim;
-
     void Start()
     {
+        animator = transform.Find("PartToRotate/Head").GetComponent<Animator>();
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
-        // PlayerAnim = Head.GetComponent<Animator>();
-        // PlayerAnim.SetBool("idle", true);
     }
 
     void UpdateTarget()
@@ -128,6 +128,7 @@ public class Turret : MonoBehaviour
             lineRenderer.enabled = true;
             impactEffect.Play();
             impactLight.enabled = true;
+            animator.SetTrigger("Shoot");
         }
 
         lineRenderer.SetPosition(0, firePoint.position);
@@ -143,14 +144,13 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
-        // PlayerAnim.SetBool("throw", true);
-        // PlayerAnim.SetBool("ThrowAnim", false);
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if (bullet != null)
         {
             bullet.Seek(target);
+            animator.SetTrigger("Shoot");
         }
     }
 
