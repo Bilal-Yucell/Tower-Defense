@@ -95,7 +95,8 @@ public class Turret : MonoBehaviour
 
         if (useMagic)
         {
-            Magic();
+            animator.SetTrigger("Shoot");
+            StartCoroutine(DoMagic());
         }
         else
         {
@@ -128,7 +129,6 @@ public class Turret : MonoBehaviour
             lineRenderer.enabled = true;
             impactEffect.Play();
             impactLight.enabled = true;
-            animator.SetTrigger("Shoot");
         }
 
         lineRenderer.SetPosition(0, firePoint.position);
@@ -158,6 +158,13 @@ public class Turret : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    IEnumerator DoMagic()
+    {
+        yield return new WaitForSeconds(2.0f);
+
+        Magic();
     }
 
 }
